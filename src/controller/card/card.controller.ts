@@ -9,10 +9,12 @@ import {
   Put,
   Res,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { CreateCardDto } from 'src/dto/create-card.dto';
 import { UpdateCardDto } from 'src/dto/update-card.dto';
 import { CardService } from 'src/service/card/card.service';
 
+@ApiTags('Card')
 @Controller('card')
 export class CardController {
   constructor(private readonly cardService: CardService) {}
